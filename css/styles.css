@@ -57,24 +57,22 @@ body {
 
 .container {
   width: 1158px;
-  /* ЕКСПЕРИМЕНТ =======================================================*/
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0px 15px;
-  /*  контур елемента 
+  /*  контур елемента */
   outline: 2px solid red;
-  outline-offset: -2px; */
+  outline-offset: -2px;
 }
 
 img {
   display: block;
   max-width: 100%;
-  /* ЕКСПЕРИМЕНТ =======================================================*/
   margin: auto;
 }
 
-/* для заголовків перезадаємо параметри */
+/* для заголовків параметри */
 .header {
   font-weight: 500;
   font-size: 20px;
@@ -108,10 +106,6 @@ img {
 }
 
 /* Прихований заголовок ==========================*/
-/* .hide-titel {
-  display: none;
-} */
-/* Альтернативний варіант - атрибут hidden в html */
 
 .visually-hidden {
   position: absolute;
@@ -129,7 +123,6 @@ img {
 
 /* для прибирання курсиву */
 address {
-  /* font-style: normal; */
   font-style: inherit;
   margin-left: auto;
 }
@@ -142,15 +135,12 @@ address {
 
 .header-box {
   background-color: white;
-  /* border-bottom-style: solid;
-  border-bottom-color: var(--portfolio-bgc);
-  border-bottom-width: 1px; */
   border-bottom: 1px solid var(--portfolio-bgc);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  /*  контур елемента 
-    outline: 2px solid red;
-    outline-offset: -2px; */
+  /*  контур елемента */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .header-container {
@@ -181,7 +171,6 @@ address {
   text-transform: uppercase;
   color: var(--logo-color);
   text-decoration: none;
-  /* align-items: center; */
 }
 
 .logo-header {
