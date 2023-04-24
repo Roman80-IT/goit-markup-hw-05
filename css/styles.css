@@ -331,10 +331,12 @@ section {
 
 .feature-icon-box {
   display: flex;
-  height: 112px;
-  /* width: 264px; */
   justify-content: center;
   align-items: center;
+
+  height: 112px;
+  /* width: 264px; */
+
   background: var(--light-font);
   border-radius: 4px;
   margin-bottom: 8px;
@@ -367,11 +369,6 @@ section {
 /* (currentColor)
   width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
     gap: var(--indent); */
-
-/* ЕКСПЕРИМЕНТ =======================================================*/
-.experiment {
-  display: flex;
-}
 
 /* ========== SECTION-3 "Our Team" ========== */
 
