@@ -205,7 +205,8 @@ address {
   color: var(--hover-btn);
 }
 
-.menu-link.current::after {
+/* .menu-link  */
+.current::after {
   content: '';
   position: absolute;
   width: 100%;
