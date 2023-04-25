@@ -221,6 +221,11 @@ address {
   border-radius: 2px;
 }
 
+/* == синій колір разом із підкресленням меню навігації == */
+.menu-link.link.current {
+  color: var(--hover-btn);
+}
+
 /* === Контакти (address) === */
 .contacts-list {
   list-style: none;
