@@ -186,7 +186,7 @@ address {
   color: var(--heading-color);
 }
 
-/* === Навігація === */
+/* === Навігація (Меню) === */
 .menu-link {
   position: relative;
   display: flex;
@@ -209,7 +209,7 @@ address {
   color: var(--hover-btn);
 }
 
-/* === підкреслення меню навігації === */
+/* == підкреслення меню навігації == */
 /* .menu-link  */
 .current::after {
   content: '';
@@ -223,7 +223,7 @@ address {
   border-radius: 2px;
 }
 
-/* === Контакти === */
+/* === Контакти (address) === */
 .contacts-list {
   list-style: none;
   display: flex;
@@ -493,7 +493,7 @@ section {
   margin-bottom: 8px;
 }
 
-/*== social icons ==*/
+/* === social icons === */
 
 .social-icon-list {
   display: flex;
@@ -509,10 +509,13 @@ section {
   display: flex;
   width: 100%;
   height: 100%;
+
   align-items: center;
   justify-content: center;
   background-color: var(--btn-color);
   border-radius: 50%;
+
+  transition: background 250ms var(--сubic);
 }
 
 .link-icon:hover,
@@ -529,11 +532,6 @@ section {
 /* (currentColor)
   width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
     gap: var(--indent); */
-
-.fake-font {
-  /* Фейковий стиль для автоперевірки */
-  line-height: 1.1;
-}
 
 .clients-list {
   display: flex;
@@ -553,11 +551,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   height: 100%;
+
   color: var(--icons-color);
   border: 1px solid var(--icons-color);
   border-radius: 4px;
+
+  transition: border 1250ms var(--сubic), color 1250ms var(--сubic);
 }
 
 .clients-link:hover,
@@ -571,10 +573,11 @@ section {
   fill: currentColor;
 }
 
-.clients-icon:hover,
+/* окремо на hover іконок колір не портібно унаслідувати*/
+/* .clients-icon:hover,
 .clients-icon:focus {
   fill: currentColor;
-}
+} */
 
 /**
   |============================
@@ -637,11 +640,15 @@ section {
   display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background-color: var(--btn-color);
+
   align-items: center;
   justify-content: center;
   background-size: cover;
+  border-radius: 50%;
+
+  background-color: var(--btn-color);
+
+  transition: background 250ms var(--сubic);
 }
 
 .footer-social-link:hover,
@@ -675,6 +682,49 @@ section {
   margin-bottom: 72px;
 }
 
+/* ========== BUTTON STYLE (Кнопки-фільтр) ========== */
+
+.filter-button {
+  display: flex;
+  align-items: center;
+
+  padding: 12px 24px;
+  /* min-width: 69px; */
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: var(--btn-color);
+  background: var(--light-font);
+
+  border: 1px solid var(--portfolio-bgc);
+  border-radius: 4px;
+
+  transition: color 5250ms var(--сubic), background 5250ms var(--сubic),
+    border 250ms var(--сubic), box-shadow 5250ms var(--сubic);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--white-color);
+  background-color: var(--hover-btn);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  /* цей стиль для вимкнення кольору при ховері (transparent - прозорий колір): */
+  border: 1px solid transparent;
+  /* border: 1px solid var(--hover-btn); */
+}
+
+/**
+  |============================
+  | Картки Portfolio 
+  |============================
+*/
+
 .list-portfolio {
   list-style-type: none;
   display: flex;
@@ -694,6 +744,8 @@ section {
 
 .portfolio-item .link {
   display: block;
+
+  transition: box-shadow 250ms var(--сubic);
 }
 
 .portfolio-item .link:hover,
@@ -707,34 +759,4 @@ section {
   border: 1px solid #e7e9fc;
   border-top: none;
   /* text-decoration: none; */
-}
-
-/* ==========BUTTON STYLE========== */
-
-.filter-button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--btn-color);
-  background: var(--light-font);
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--portfolio-bgc);
-  border-radius: 4px;
-  /* min-width: 69px; */
-  padding: 12px 24px;
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--white-color);
-  background-color: var(--hover-btn);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  /* цей стиль для вимкнення кольору при ховері: */
-  border: 1px solid transparent;
-  /* border: 1px solid var(--hover-btn); */
 }
