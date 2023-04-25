@@ -378,8 +378,8 @@ section {
 }
 .modal-btn:hover,
 .modal-btn:focus {
-  background-color: var(--pressed-state-cl);
-  color: var(--light-color);
+  background-color: var(--hover-btn);
+  color: var(--light-font);
   cursor: pointer;
 }
 
