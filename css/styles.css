@@ -455,20 +455,23 @@ section {
   /* Кожне Слово З Великої Літери */
   text-transform: capitalize;
   background-color: var(--light-font);
-  --items: 3;
+  --items: 4;
 }
 
 .team-list {
-  list-style-type: none;
   display: flex;
   gap: var(--indent);
-  /* flex-wrap: wrap; */
-  /* padding-left: 0px; */
+
+  /* Інші приклади: */
+  /* list-style-type: '\1F44D'; */
+  /* list-style-type: space-counter; */
+  /* list-style-type: none; */
 }
 
 .team-items {
-  flex-basis: calc((100% - 72px) / 4);
-  /* width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
+  /* calc((100% - 72px) / 4) */
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
   /* ЕКСПЕРИМЕНТ =======================================================*/
   /* маржинами картинку не вирівняти - потрібно на його "div" впливати?
   margin-left: auto;
@@ -724,15 +727,18 @@ section {
 .list-portfolio {
   display: flex;
   flex-wrap: wrap;
-  /* padding-left: 0px; */
+
   column-gap: var(--indent);
   row-gap: calc(var(--indent) * 2);
+
   list-style-type: none;
   --items: 3;
 }
 
 .portfolio-item {
   max-width: 360px;
+
+  /* Ширину елементів вже задано в html */
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
@@ -750,7 +756,7 @@ section {
 
 .card-categories {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--portfolio-bgc);
   border-top: none;
 }
 
