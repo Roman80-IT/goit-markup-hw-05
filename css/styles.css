@@ -5,8 +5,7 @@
   /* NAVY BLUE - hero background (bg), menu & headings fonts*/
   --hero-color: #2e2f42;
   --heading-color: #2e2f42;
-  /* SLATE - dark fonts contacts & main text */
-  --address-color: #434455;
+  /* SLATE - contacts & main text - dark fonts */
   --main-fonts: #434455;
   /* CLOUD & white - light fonts, Section-3 bg */
   --light-font: #f4f4fd;
@@ -24,6 +23,7 @@
   --backdrop: rgba(46, 47, 66, 0.4);
   --indent: 24px;
 }
+/* width:/flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 
 /**
   |============================
@@ -235,7 +235,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  color: var(--address-color);
+  color: var(--main-fonts);
 
   transition: color 250ms var(--сubic);
 }
@@ -247,12 +247,13 @@ address {
 */
 
 .hero-bloc {
-  /* background-color: var(--hero-color); */
   padding-top: 188px;
   padding-bottom: 188px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  /* background-color: var(--heading-color); */
   background-color: rgba(46, 47, 66, 0.7);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -366,7 +367,8 @@ section {
 
   border: none;
   border-radius: 50%;
-  background-color: #e7e9fc;
+
+  background-color: var(--portfolio-bgc);
   background-size: cover;
 
   transition: color 250ms var(--сubic), background 250ms var(--сubic);
@@ -730,15 +732,15 @@ section {
   flex-wrap: wrap;
   /* padding-left: 0px; */
   column-gap: var(--indent);
-  row-gap: 48px;
+  row-gap: calc(var(--indent) * 2);
   list-style-type: none;
+  --items: 3;
 }
 
 .portfolio-item {
   max-width: 360px;
-  width: calc((100% - 48px) / 3);
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
-/* width:/flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 
 .portfolio-item .link {
   display: block;
