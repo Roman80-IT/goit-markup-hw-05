@@ -462,7 +462,7 @@ section {
   display: flex;
   gap: var(--indent);
 
-  /* Інші приклади: */
+  /* приклади list-style: */
   /* list-style-type: '\1F44D'; */
   /* list-style-type: space-counter; */
   /* list-style-type: none; */
@@ -558,7 +558,7 @@ section {
   border: 1px solid var(--icons-color);
   border-radius: 4px;
 
-  transition: border 1250ms var(--сubic), color 1250ms var(--сubic);
+  transition: border 250ms var(--сubic), color 250ms var(--сubic);
 }
 
 .clients-link:hover,
