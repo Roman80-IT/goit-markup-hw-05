@@ -421,6 +421,10 @@ section {
 
 /* ========== SECTION-2 "We doing",(3) (h2) ========== */
 
+.work {
+  --items: 3;
+}
+
 .header-two {
   font-weight: 700;
   font-size: 36px;
@@ -441,17 +445,17 @@ section {
 }
 
 .work-list-item {
-  flex-basis: calc((100% - 48px) / 3);
+  /* calc((100% - 48px) / 3) */
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
-/* width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
-   */
 
 /* ========== SECTION-3 "Our Team" ========== */
 
-.section-3 {
+.team {
   /* Кожне Слово З Великої Літери */
   text-transform: capitalize;
   background-color: var(--light-font);
+  --items: 3;
 }
 
 .team-list {
