@@ -392,6 +392,7 @@ section {
 
 .section-delta {
   padding-top: 120px;
+  --items: 4;
 }
 
 .feature-list {
@@ -400,12 +401,10 @@ section {
 }
 
 .scroll-box {
-  flex-basis: calc((100%-72px) / 4);
+  /* calc((100%-72px) / 4) */
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   /* gap: 24px; */
 }
-/* (currentColor)
-  width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
-    gap: var(--indent); */
 
 .feature-icon-box {
   display: flex;
