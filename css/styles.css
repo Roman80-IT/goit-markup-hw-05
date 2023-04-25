@@ -164,6 +164,7 @@ address {
   gap: 40px;
 }
 
+/* === LOGO === */
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -183,6 +184,7 @@ address {
   color: var(--heading-color);
 }
 
+/* === Навігація === */
 .menu-link {
   position: relative;
   display: flex;
@@ -205,6 +207,7 @@ address {
   color: var(--hover-btn);
 }
 
+/* === підкреслення меню навігації === */
 /* .menu-link  */
 .current::after {
   content: '';
@@ -218,6 +221,7 @@ address {
   border-radius: 2px;
 }
 
+/* === Контакти === */
 .contacts-list {
   list-style: none;
   display: flex;
@@ -273,7 +277,11 @@ section {
   padding-bottom: 120px;
 }
 
-/* ========== BUTTON STYLE ========== */
+/**
+  |============================
+  | BUTTON STYLE
+  |============================
+*/
 
 .btn {
   /* display: flex; невірно*/
@@ -289,6 +297,8 @@ section {
 
   background-color: var(--btn-color);
   cursor: pointer;
+
+  transition: background 250ms var(--сubic);
 }
 
 .btn:hover,
@@ -296,6 +306,7 @@ section {
   background-color: var(--hover-btn);
 }
 
+/* можна перенести до "btn" */
 .btn-text {
   font-family: inherit;
   font-weight: 500;
@@ -303,6 +314,69 @@ section {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
+}
+
+/* ========== modal window ========== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--backdrop);
+  transition: opacity 250ms var(--сubic), visibility 250ms var(--сubic);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  min-width: 408px;
+  min-height: 576px;
+  padding: 24px;
+
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  background-size: cover;
+
+  transition: color 250ms var(--сubic), background 250ms var(--сubic);
+}
+.icon-close {
+  fill: currentColor;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--pressed-state-cl);
+  color: var(--light-color);
+  cursor: pointer;
 }
 
 /**
