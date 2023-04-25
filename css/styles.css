@@ -1,9 +1,7 @@
 :root {
   /* IRIS - logo, button color*/
-  --logo-color: #4d5ae5;
   --btn-color: #4d5ae5;
   /* NAVY BLUE - hero background (bg), menu & headings fonts*/
-  --hero-color: #2e2f42;
   --heading-color: #2e2f42;
   /* SLATE - contacts & main text - dark fonts */
   --main-fonts: #434455;
@@ -174,7 +172,7 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--logo-color);
+  color: var(--btn-color);
   text-decoration: none;
 }
 
@@ -446,9 +444,8 @@ section {
 .work-list-item {
   flex-basis: calc((100% - 48px) / 3);
 }
-/* (currentColor)
-  width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
-    gap: var(--indent); */
+/* width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
+   */
 
 /* ========== SECTION-3 "Our Team" ========== */
 
@@ -468,9 +465,7 @@ section {
 
 .team-items {
   flex-basis: calc((100% - 72px) / 4);
-  /* (currentColor)
-  width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
-    gap: var(--indent); */
+  /* width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
   /* ЕКСПЕРИМЕНТ =======================================================*/
   /* маржинами картинку не вирівняти - потрібно на його "div" впливати?
   margin-left: auto;
@@ -530,10 +525,6 @@ section {
 }
 
 /* ========== SECTION-4 "Customers" ========== */
-
-/* (currentColor)
-  width: / flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); 
-    gap: var(--indent); */
 
 .clients-list {
   display: flex;
